@@ -47,7 +47,7 @@ const Getweather = () => {
         <div className='container'>
 
             {
-                weatherData ? weatherData.daily.slice(2, 7).map((day, index) => {
+                weatherData ? weatherData.daily.slice(0, 5).map((day, index) => {
                         
                         //Convert Fahrenheit to Celsius
                         const tempHighCelsius = convertToFahrenheit(day.temp.max);
