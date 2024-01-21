@@ -47,7 +47,7 @@ const Getweather = () => {
         <div className='container'>
 
             {
-                weatherData ? weatherData.daily.slice(2, 7).map((day, index) => {
+                weatherData ? weatherData.daily.slice(0, 7).map((day, index) => {
                         
                         //Convert Fahrenheit to Celsius
                         const tempHighCelsius = convertToFahrenheit(day.temp.max);
@@ -56,7 +56,7 @@ const Getweather = () => {
                         return <Viewweather key={index}
                             desc={day.weather[0].description}
                             dateNum={day.dt}
-                            dayIcon={`http://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png`} 
+                            dayIcon={`https://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png`} 
                             tempHigh={tempHighCelsius}
                             tempLow={tempLowCelsius}
                         />
