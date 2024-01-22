@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import {Helmet} from "react-helmet";
+import { PiArrowBendRightUpDuotone } from "react-icons/pi";
 
 const GetSelectedWeather = () => {
 
@@ -115,7 +116,7 @@ const GetSelectedWeather = () => {
       ) : (
         <>
           <div className="up-arrow-container">
-            <div className="up-arrow"></div>
+            <PiArrowBendRightUpDuotone className="arrow" />
           </div>
           {/* <h2 className='w-loading'>Loading...</h2> */}
         </>
