@@ -18,12 +18,16 @@ const Getweather = () => {
         } else{
             navigator.geolocation.getCurrentPosition((position)=>{
 
-                const apiURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${position.coords.latitude}&lon=${position.coords.longitude}&units=imperial&exclude=minutely&appid=${api}`
-
+                const apiURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${position.coords.latitude}&lon=${position.coords.longitude}&units=imperial&exclude=minutely&appid=${api}` 
+                
                 fetch(apiURL)
                 .then(res => res.json())
                 .then(data => {
                     setWeatherData(data)
+//----------------------------------
+
+
+//----------------------------------
                 })
                 .catch(err => console.log(err.message))
             })
