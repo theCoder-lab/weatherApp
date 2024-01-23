@@ -55,6 +55,7 @@ const GetSelectedWeather = () => {
   };
 
   return (
+    <>
     <div className="w-main">
       <Helmet>
         <meta charSet="utf-8" />
@@ -62,7 +63,7 @@ const GetSelectedWeather = () => {
         <meta name="keywords" content="weather,forcast,washington,istanbul,london,berlin," />
         <title>Weather Forcating App</title>
       </Helmet>  
-      <div style={{ margin: "30px 0" }}>
+      <div className="w-heading-container">
         <h2 className="w-heading">Five Days Weather Forecast</h2>
       </div>
       <div>
@@ -104,7 +105,7 @@ const GetSelectedWeather = () => {
               <h3>{dayName(day.dt)}</h3>
               <img
                 className="w-img"
-                src={`http://openweathermap.org/img/wn/${day.weather[0].icon}.png`}
+                src={`https://openweathermap.org/img/wn/${day.weather[0].icon}.png`}
                 alt={`Weather icon for ${day.weather[0].description}`}
               />
               <p className="w-info">{day.weather[0].description}</p>
@@ -122,6 +123,10 @@ const GetSelectedWeather = () => {
         </>
       )}
     </div>
+    <footer className="w-footer">
+      <p >Developed by Jan Darwish &copy;2024</p>
+    </footer>
+    </>
   );
 };
 

@@ -29,6 +29,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  min-height: 100vh;
 }
 
 h1 {
@@ -61,11 +62,12 @@ h1 {
 
 .w-main {
   width: 100%;
+  height: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  padding: 0 30px;
+  padding: 0 0 50px;
 }
 
 .w-container {
@@ -95,15 +97,25 @@ h1 {
   color: #3652ad;
   background-color: #fff;
   opacity: 0.7;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   border-radius: 8px;
 }
 
+.w-heading-container{
+  width: 100%;
+  height: 60px;
+  margin-bottom: 30px;
+  background-color: transparent;
+  padding: 10px;
+}
+
 .w-heading {
-  color: #fff;
+ 
+  color: #FFF;
   text-align: center;
   font-size: 2rem;
   font-weight: bold;
+  padding: 10px;
 }
 
 .w-select option {
@@ -137,6 +149,25 @@ h1 {
   margin-top: 10px;
   margin-bottom: 10px;
   color: #3652ad;
+}
+
+.w-footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 9;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+}
+
+.w-footer p{
+  text-align: center;
+  font-size: 0.8rem;
+  color: #FFF;
 }
 
 .heigh {
